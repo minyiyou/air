@@ -21,7 +21,9 @@ var chart = c3.generate({
         x: 'Year',
         xFormat: '%Y',
         url: 'EventofYear.csv',
-        type:'bar',
+        type:{
+          Events:'bar',
+        }
         },
     
     bar: {

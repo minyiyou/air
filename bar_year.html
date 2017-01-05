@@ -28,7 +28,7 @@ var chart = c3.generate({
     
     bar: {
     width: {
-    ratio: 0.5
+    ratio: 0.3
         }
      },
     axis: {
@@ -44,6 +44,7 @@ var chart = c3.generate({
             // if false, convert to UTC internally
             tick: {
                 format: '%Y',
+                count: 25,
                 rotate: 75
             }
         }

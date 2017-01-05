@@ -21,7 +21,7 @@ var chart = c3.generate({
         x: 'Year',
         xFormat: '%Y',
         url: 'EventofYear.csv',
-        types:'bar',
+        type:'bar',
         },
     
     bar: {
@@ -41,7 +41,8 @@ var chart = c3.generate({
             // if true, treat x value as localtime (Default)
             // if false, convert to UTC internally
             tick: {
-                format: '%Y'
+                format: '%Y',
+                rotate: 75
             }
         }
     },

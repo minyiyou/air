@@ -23,7 +23,14 @@ var chart = c3.generate({
         url: 'EventofYear.csv',
         types:{
           Events:'bar',
-        }
+        },
+        colors: {
+            Events: '#EEA9A9',
+          
+        },
+        color: function (color, d) {
+            // d will be 'id' when called for legends
+            return d.id && d.id === 'Events' ? d3.rgb(color).darker(d.value / 15) : color;
         },
     
     bar: {
@@ -55,10 +62,7 @@ var chart = c3.generate({
     subchart: {
         show: true
     },
-    colors: {
-            Pattern: ['#EEA9A9','#aec7e8']
-            
-        },
+
 });
 
 

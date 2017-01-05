@@ -31,6 +31,7 @@ var chart = c3.generate({
         color: function (color, d) {
             // d will be 'id' when called for legends
             return d.id && d.id === 'Events' ? d3.rgb(color).darker(d.value / 15) : color;
+          }
         },
     
     bar: {

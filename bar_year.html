@@ -40,10 +40,10 @@ var chart = c3.generate({
             x: {
                  type: 'timeseries',
                  tick: {
-                         format: function (x) { return x.getFullYear(); }
-                         // culling : {
-                         //             max: 110
-                         //           },
+                         count : 110,
+                         culling : {
+                                     max: 110
+                                   },
                          rotate: 75,
                          outer: false
                        }

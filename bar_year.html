@@ -17,55 +17,51 @@
 <script type="text/javascript">
 
 var chart = c3.generate({
+    padding: {
+               top: 40,
+               right: 100,
+               bottom: 40,
+               left: 100,
+             },
     data: {
-        x: 'Year',
-        xFormat: '%Y',
-        url: 'EventofYear.csv',
-        types:{
-          Events:'area-step',
-        },
-        colors: {
-            Events: '#F37C78',
+            x: 'Year',
+            xFormat: '%Y',
+            url: 'EventofYear.csv',
+            types:{
+                    Events:'area-step',
+                  },
+            colors: {
+                      Events: '#F37C78',
           
-        },
-        // color: function (color, d) {
-        //     // d will be 'id' when called for legends
-        //     return d.id && d.id === 'Events' ? d3.rgb(color).darker(d.value / 15) : color;
-        //   }
-        },
-    
+                    },
+          },
     bar: {
-    width: {
-    ratio: 0.2
-        }
-     },
+            width: {
+                     ratio: 0.2
+                   }
+         },
     axis: {
-        // x: {
-        //     type: 'timeseries',
-        //     tick: {
-        //         format: '%Y',
-        //         rotate: 75
-        //     }
-        x: {
-            type: 'timeseries',
-            // if true, treat x value as localtime (Default)
-            // if false, convert to UTC internally
-            tick: {
-                format: '%Y',
-                count: 108,
-                culling : {
-                  max: 108
-                },
-                rotate: 75
-            }
-        }
-    },
+            x: {
+                 type: 'timeseries',
+                 tick: {
+                         format: '%Y',
+                         count: 108,
+                         culling : {
+                                     max: 108
+                                   },
+                         rotate: 75
+                       }
+               }
+          },
     zoom: {
-        enabled: true
-    },
+            enabled: true,
+            rescale: true,
+            extent: [1, 6]
+          },
     subchart: {
-        show: true
-    },
+                show: true,
+                
+              },
 
 });
 

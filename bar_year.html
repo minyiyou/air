@@ -41,11 +41,11 @@ var chart = c3.generate({
                  type: 'timeseries',
                  tick: {
                          format: function (x) { return x.getFullYear(); }
-                         count: 110,
                          culling : {
                                      max: 110
                                    },
-                         rotate: 75
+                         rotate: 75,
+                         outer: false
                        }
                }
           },

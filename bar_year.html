@@ -28,7 +28,7 @@ var chart = c3.generate({
             xFormat: '%Y',
             url: 'EventofYear.csv',
             types:{
-                    Events:'line',
+                    Events:'area-step',
                   },
             colors: {
                       Events: '#F37C78',
@@ -61,7 +61,7 @@ var chart = c3.generate({
     zoom: {
             enabled: true,
             rescale: true,
-            extent: [1, 6]
+            extent: [1, 1]
           },
     subchart: {
                 show: true,

@@ -53,6 +53,9 @@ var chart = c3.generate({
             tick: {
                 format: '%Y',
                 count: 25,
+                culling : {
+                  max: 100
+                },
                 rotate: 75
             }
         }

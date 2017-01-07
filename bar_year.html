@@ -43,16 +43,17 @@ var chart = c3.generate({
   
     axis: {
             x: {
-                 type: 'category',
+                 type: 'timeseries',
                  
                  
                  tick: {
+                         format: '%Y',
                          count : 110,
                          culling : {
                                      max: 110
                                    },
                          rotate: 75,
-                         centered: true,                                              
+                        
                         
                        }
                }
